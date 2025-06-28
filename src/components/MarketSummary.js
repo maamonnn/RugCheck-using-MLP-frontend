@@ -43,8 +43,7 @@ export default function MarketSummary() {
       <h2>Market Summary</h2>
       <p><strong>Total Market Cap:</strong> {formatMC(data.totalMarketCapUSD)}</p>
       <p><strong>BTC Dominance:</strong> {data.btcDominance.toFixed(2)}%</p>
-      <p><strong>SOL Market Cap Share:</strong> {data.solMarketCapPercent.toFixed(2)}%</p>
-      <p><strong>Fear & Greed Index:</strong> {data.fearIndex} — {data.fearLevel}</p>
+      <p><strong>Active Cryptocurrencies:</strong> {data.activeCryptocurrencies}</p>
     </div>
   );
 }
