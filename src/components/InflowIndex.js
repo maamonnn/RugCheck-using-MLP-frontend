@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from './config';
 
 function formatTVL(value) {
   if (value >= 1e9) return `$${(value / 1e9).toFixed(2)}B`;
@@ -15,7 +16,7 @@ export default function SolanaInflow() {
   useEffect(() => {
     const fetchInflow = async () => {
       try {
-        const res = await axios.get('http://localhost:5001/api/solana-inflow');
+        const res = await axios.get(`${BASE_URL}/api/solana-inflow`);
         setAllProtocols(res.data);
       } catch (err) {
         console.error('Failed to fetch inflow data:', err.message);
