@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from './config';
 
 
 function formatMC(value) {
@@ -15,7 +16,7 @@ export default function MarketSummary() {
   useEffect(() => {
     const fetchMarketData = async () => {
       try {
-        const res = await axios.get('http://localhost:5001/api/market-summary');
+        const res = await axios.get(`${BASE_URL}/api/market-summary`);
         setData(res.data);
       } catch (err) {
         console.error('Failed to load market summary:', err.message);
