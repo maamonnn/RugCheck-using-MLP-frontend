@@ -6,7 +6,7 @@ function PriceDisplay() {
   const [priceBTC, setPriceBTC] = useState(null);
 
     useEffect(() => {
-    const ws = new WebSocket('ws://localhost:5001');
+    const ws = new WebSocket('wss://rugcheck-using-mlp-backend.onrender.com');
     ws.onmessage = (event) => {
         const data = JSON.parse(event.data);
         if(data.symbol == 'BTC'){
