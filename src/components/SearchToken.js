@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from './config';
 
 export default function RugChecker() {
   const [input, setInput] = useState('');
@@ -13,8 +14,8 @@ export default function RugChecker() {
     setResult(null);
     setError('');
     try {
-      const res = await axios.get(`http://localhost:5001/api/rugcheck/${input}`);
-      console.log(res.data); // 🔍 debug response
+      const res = await axios.get(`${BASE_URL}/api/rugcheck/${input}`);
+      console.log(res.data);
       setResult(res.data);
     } catch (err) {
       console.error(err);
