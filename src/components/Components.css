@@ -1,0 +1,50 @@
+.body{
+  background-color: rgb(13, 7, 21);
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.left-content{
+    justify-content: center;
+    background-color: #090040;
+    color: white;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    width: auto;
+
+}
+
+.mid-content{
+    background-color: #090040;
+    color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+.right-content{
+    background-color: #090040;
+    color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+.balance,
+.indikator {
+  background-color: #471396;
+  color: white;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.button-navigate{
+    border: none;
+    border-radius: 6px;
+    background-color: #090040;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
